@@ -1,40 +1,31 @@
 {
-  "name": "charonlab/charon-framework",
-  "description": "",
+  "name": "aether/cache",
+  "description": "The Aether cache package.",
   "license": "MIT",
-  "require": {
-    "php": "~8.2.0 || ~8.3.0"
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
   },
-  "require-dev": {
-    "charonlab/coding-standard": "1.2.x-dev",
-    "phpunit/phpunit": "^11.1.x-dev",
-    "vimeo/psalm": "^6.x-dev"
+  "provide": {
+    "psr/cache": "*"
+  },
+  "require": {
+    "php": "^8.2",
+    "psr/cache": "^3.0"
   },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Charon\\Framework\\": "src/"
+      "Aether\\Cache\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Charon\\Tests\\Framework\\": "tests/"
+      "Aether\\Tests\\Cache\\": "tests/"
     }
   },
   "config": {
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    },
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "8.2.16"
-    },
     "sort-packages": true
-  },
-  "scripts": {
-    "lint-check": "phpcs",
-    "lint-fix": "phpcbf",
-    "static-analysis": "psalm --shepherd --stats",
-    "test": "phpunit --colors=always"
   }
 }
